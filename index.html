@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<!-- CSS -->
+	<!-- inline BASE CSS styles -->
+	<style>
+
+	</style>
+	<title>FC MetroStars</title>
+</head>
+<body>
+
+
+<!-- JAVASCRIPT -->
+	<!-- jQuery -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<!-- Lazy Load CSS -->
+<script type="text/javascript">
+// copied from http://stackoverflow.com/questions/574944/how-to-load-up-css-files-using-javascript
+// allows JavaScript to load CSS
+
+function addCSS( path ){
+
+	var link = document.createElement( "link" );
+		link.href = path;
+		link.type = "text/css";
+		link.rel = "stylesheet";
+		link.media = "screen,print";
+
+	document.getElementsByTagName( "head" )[0].appendChild( link );
+}
+
+addCSS( 'css/reset.css'  );
+addCSS( 'css/styles.css' );
+
+</script>
+
+</body>
+
+</html>
