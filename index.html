@@ -11,27 +11,19 @@
 <body>
 
 
-<!-- JAVASCRIPT -->
+<!-- JAVASCRIPT -->	
+	<!-- Lazy Load CSS -->
+<script type="text/javascript" src="js/cssLoad.js"></script>
 	<!-- jQuery -->
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-	<!-- Lazy Load CSS -->
+	<!-- AJAX script to write the JSON files ::: function writeXML( filename, content ) -->
+<script type="text/javascript" src="js/write.js"></script>
+
 <script type="text/javascript">
-// copied from http://stackoverflow.com/questions/574944/how-to-load-up-css-files-using-javascript
-// allows JavaScript to load CSS
-
-function addCSS( path ){
-
-	var link = document.createElement( "link" );
-		link.href = path;
-		link.type = "text/css";
-		link.rel = "stylesheet";
-		link.media = "screen,print";
-
-	document.getElementsByTagName( "head" )[0].appendChild( link );
-}
-
-addCSS( 'css/reset.css'  );
-addCSS( 'css/styles.css' );
+// testing script area
+$(document).ready(function(){
+	writeXML( 'richard.json', 'this is a test file' );
+});
 
 </script>
 
