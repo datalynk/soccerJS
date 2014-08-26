@@ -1,4 +1,4 @@
-function writeXML( filename, content ){
+function writeJSON( filename, content ){
 
 	$.ajax({
 		type : 'POST',
@@ -11,7 +11,7 @@ function writeXML( filename, content ){
 		console.log( "SUCCESS: wrote file -> " + filename );
 	})
 	.fail(function( jqXHR, textStatus, errorThrown ){
-		console.log(( "FAILED: " + textStatus );
+		console.log( "FAILED: " + textStatus );
 	})
 	.always(function() {
 		console.log( "COMPLETE: writeXML() AJAX called" );
