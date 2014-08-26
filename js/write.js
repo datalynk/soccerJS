@@ -7,14 +7,15 @@ function writeJSON( filename, content ){
 			filename: filename,
 			contents: content
 		}
-	}).done(function() {
+	})
+	.done(function() {
 		console.log( "SUCCESS: wrote file -> " + filename );
 	})
 	.fail(function( jqXHR, textStatus, errorThrown ){
 		console.log( "FAILED: " + textStatus );
 	})
 	.always(function() {
-		console.log( "COMPLETE: writeXML() AJAX called" );
+		console.log( "COMPLETE: writeJSON() AJAX called" );
 	});
 
 }

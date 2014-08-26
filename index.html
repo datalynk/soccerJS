@@ -18,13 +18,26 @@
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<!-- AJAX script to write the JSON files ::: function writeJSON( filename, content ) -->
 <script type="text/javascript" src="js/write.js"></script>
+	<!-- AJAX script to read the JSON files ::: function readJSON( filename ) || returns content -->
+<script type="text/javascript" src="js/read.js"></script>
 
 
 
 <script type="text/javascript">
 // testing script area
 $(document).ready(function(){
-// 	writeJSON( 'richard.json', 'this is a test file' );
+	// copied from: http://stackoverflow.com/questions/4162749/convert-js-object-to-json-string
+	/*
+	var contents = { name: 'richard', name: 'douglas' };
+	var jsonCont = JSON.stringify( contents );
+	writeJSON( 'test.json', jsonCont );
+	*/
+	readJSON( 'test.json', getJSON );
+
+	function getJSON( data ){
+		console.log( data );
+	}
+
 });
 </script>
 
